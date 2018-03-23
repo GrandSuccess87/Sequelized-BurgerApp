@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("Post", {
+  var Burger = sequelize.define("Post", {
     burgerName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -12,8 +12,15 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     }
-  });
+  }, 
 
-  Post.sync()
-  
+    {
+      timestamps: false
+
+    });   
+ 
+
+  Burger.sync()
+
+
 };
